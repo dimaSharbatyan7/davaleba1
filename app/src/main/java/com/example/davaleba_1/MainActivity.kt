@@ -25,8 +25,7 @@ class MainActivity : AppCompatActivity() {
         binding.apply {
             sendButton.setOnClickListener {
 
-                if (!emailEditText.text.contains("@") || emailEditText.text.toString().isEmpty() || messageEditText.text.toString()
-                        .isEmpty()
+                if (!emailEditText.text.contains("@") || emailEditText.text.isEmpty() || messageEditText.text.isEmpty() || messageEditText.text.length > 250
                 ) {
                     Toast.makeText(this@MainActivity, "Error!", Toast.LENGTH_SHORT).show()
                 } else {
